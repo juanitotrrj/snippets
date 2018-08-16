@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# Get list of running processes. In this case, "apt"
+# Useful when you got a "locking error" due to a running instance of apt upon "sudo apt-get update"
+ps -ewwo pid,args | grep apt
+
+# List of running PHP processes
+# Useful when running off of crond
+ps -ewwo pid,args | grep php
